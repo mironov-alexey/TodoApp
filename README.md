@@ -28,13 +28,14 @@
 ### 3. Написание тестов для TodoStore.js
 
 1. Перейдите в файл `test/todostore.tests.js`;
-2. Напишите новые тесты для проверки работы `TodoStore.js`.
+2. Напишите новые тесты для проверки работы `TodoStore.js`;
+3. Запустите тесты с помощью команды `karma start`
 
 ### 4. Создание UI
 
 1. Установите в проект AngularJS: `npm install angular --save`;
 2. Перейдите в контроллер компонента `TodoList.js`;
-3. Создайте основные методы обработки пользовательского ввода, с помощью `TodoStore.js`;
+3. Создайте основные методы обработки пользовательского ввода у `TodoList.js`, с помощью сервиса `TodoStore.js`;
 4. Создайте шаблон компонента `TodoList` на основе HTML разметки от верстальщика (`etc/todo-list.html`);
 5. Поместите файл стилей списка (`etc/todo-list.css`) в папку компонента (`app/components/todo-list`);
 6. Подключите перемещенный в п.5 файл стилей к странице `index.html` в теге `<head>`:
@@ -42,6 +43,7 @@
 ``` html
 <link rel="stylesheet" href="app/components/todo-list/todo-list.css" />
 ```
+
 7. Подключите к `index.html` все необходимые скрипты перед закрывающимся тегом `</body>`: `angular.min.js`,`TodoStore.js`,`TodoList.js`,`app.js`.
 
 ### 5. Фильтрация задач (самостоятельно)
