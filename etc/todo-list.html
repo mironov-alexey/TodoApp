@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="" type="image/png">
+    <link rel="icon" href="" type="image/png">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" type="text/css" href="common/normalize.css">
+    <link rel="stylesheet" type="text/css" href="common/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <link rel="stylesheet" type="text/css" href="styles/todo.css">
+    <meta name="apple-mobile-web-app-title" content="Crash Course TODO List">
+    <title>Crash Course TODO List</title>
+  </head>
+  <body>
+    <div class="todo">
+      <div class="todo__window">
+        <div class="todo__window-header">
+          <h1 class="todo__window-header-text">TodoApp</h1>
+          <!-- Фильтр задач -->
+          <div class="todo-filter">
+            <label class="todo-filter__item">
+              <input type="radio" 
+                     value="todo" 
+                     name="todo-filter" 
+                     class="todo-filter__input"><span class="todo-filter__text">todo</span>
+            </label>
+            <label class="todo-filter__item">
+              <input type="radio" 
+                     value="done" 
+                     name="todo-filter" 
+                     class="todo-filter__input"><span class="todo-filter__text">done</span>
+            </label>
+            <label class="todo-filter__item">
+              <input type="radio" 
+                     value="all" 
+                     name="todo-filter" 
+                     class="todo-filter__input"><span class="todo-filter__text">all</span>
+            </label>
+          </div>
+        </div>
+        <div class="todo__window-body">
+          <!-- Список задач -->
+          <ul class="todo__list">
+            <li class="todo__list-item">
+              <div class="todo-item">
+                <input type="checkbox" checked class="todo-item__input">
+                <!-- Название самой задачи здесь -->
+                <span class="todo-item__text">Купить масло</span>
+              </div>
+              <!-- Кнопка удаления задачи -->
+              <a href="" class="todo-del"></a>
+            </li>
+            <li class="todo__list-item">
+              <div class="todo-item">
+                <input type="checkbox"  class="todo-item__input"><span class="todo-item__text">Оплатить коммуналку</span>
+              </div><a href="" class="todo-del"></a>
+            </li>
+            <li class="todo__list-item">
+              <div class="todo-item">
+                <input type="checkbox" class="todo-item__input"><span class="todo-item__text">Подготовить материал для стажеров</span>
+              </div><a href="" class="todo-del"></a>
+            </li>
+            <li class="todo__list-item">
+              <div class="todo-item">
+                <input type="checkbox" class="todo-item__input"><span class="todo-item__text">Какой-нибудь довольно длинный текст, чтобы посмотреть как оно будет</span>
+              </div><a href="" class="todo-del"></a>
+            </li>
+            <li class="todo__list-item">
+              <div class="todo-item">
+                <input type="checkbox" class="todo-item__input"><span class="todo-item__text">Заверстать тудушник</span>
+              </div><a href="" class="todo-del"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="todo__window-footer">
+          <!-- Форма создания новой задачи -->
+          <form class="control-container">
+            <div class="control-container__input">
+              <input type="text" placeholder="Новая задача" class="new-todo-input">
+            </div>
+            <div class="control-container__submit">
+              <!-- Кнопка добавления задачи -->
+              <button type="submit" class="add-new-todo"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+*.gitattributes
+
+.idea
+node_modules
+bower_components
+
+app/**/*.js.map
+test/**/*.js.map
+
+dist
+
+.DS_Store
