@@ -19,22 +19,47 @@ TodoStore.prototype.getAll = function () {
  */
 TodoStore.prototype.add = function (todo) {
     //TODO implement
+    if (!todo.title)
+    {
+        throw new Error("Fill the title!");
+    }
+    todo.completed = false;
+    todo.id = this.$generateUniqueId()
+
+    var all = this.getAll();
+    all.push(todo);
+    this.$save(all);
 };
 
 /**
  * Удалить задачу из списка
  * @param todo
  */
-TodoStore.prototype.remove = function (todo) {
+TodoStore.prototype.remove = function(todo) {
     //TODO implement
+    if (!todo.id)
+    {
+        throw new Error('Нет ID');
+    }
+    var all = this.getAll();
+    _.remove(all, function(item){return item.id === todo.id});
+    this.$save()
+    this.$save(all);
 };
 
 /**
  * Завершить выполнение
  * @param todo
  */
-TodoStore.prototype.complete = function (todo, complete) {
+TodoStore.prototype.changeState = function (todo, state) {
     //TODO implement
+    var all = this.getAll()
+    var todoItem = _.find(all, function(item){return item.id === todo.id});
+    if (todoItem)
+    {
+        todoItem.completed = state;
+        this.$save(all);
+    }
 };
 
 /**
